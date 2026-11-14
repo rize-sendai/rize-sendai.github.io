@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>合同会社ライズ | 仙台・東北の電気設備工事・半導体施設・施工支援</title>
+  <meta name="description" content="宮城県仙台市を拠点に東北全域で電気設備工事、半導体製造施設・プラント配線、ネットワーク工事、技術支援を行う合同会社ライズ（RIZE LLC）の公式サイトです。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0f1e36;
+      --navy-deep: #091324;
+      --gold: #c6a15b;
+      --gold-light: #e0c387;
+      --bg: #ffffff;
+      --bg-soft: #f5f7fa;
+      --text: #1c2430;
+      --muted: #5a6577;
+      --border: #dfe5ee;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.75;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(9, 19, 36, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(198, 161, 91, 0.25);
+    }
+    .nav-wrap {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px; color: #fff;
+    }
+    .brand img {
+      width: 38px; height: 38px;
+      filter: invert(72%) sepia(32%) saturate(600%) hue-rotate(5deg) brightness(95%);
+    }
+    .brand-text .jp { font-size: 1.05rem; font-weight: 700; letter-spacing: 0.06em; }
+    .brand-text .en { font-size: 0.68rem; color: var(--gold); letter-spacing: 0.16em; display: block; line-height: 1.1; }
+    nav { display: flex; align-items: center; gap: 28px; color: #e2e8f0; font-size: 0.9rem; }
+    nav a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold); color: var(--navy-deep); font-weight: 700;
+      padding: 9px 18px; border-radius: 4px; font-size: 0.85rem;
+    }
+    .nav-cta:hover { background: var(--gold-light); color: var(--navy-deep); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, #1a3254 100%);
+      color: #fff;
+      padding: 100px 0 92px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(circle at 80% 30%, rgba(198, 161, 91, 0.14), transparent 55%);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 720px; }
+    .hero-badge {
+      display: inline-block; font-size: 0.78rem; letter-spacing: 0.14em;
+      color: var(--gold); border: 1px solid rgba(198, 161, 91, 0.45);
+      padding: 5px 14px; border-radius: 20px; margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      line-height: 1.35; font-weight: 700; margin-bottom: 20px; letter-spacing: 0.03em;
+    }
+    .hero p { color: #cbd5e1; font-size: 1.02rem; margin-bottom: 34px; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold); color: var(--navy-deep); font-weight: 700;
+      padding: 13px 28px; border-radius: 4px; display: inline-block;
+    }
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.4); color: #fff;
+      padding: 13px 26px; border-radius: 4px; display: inline-block;
+    }
+
+    /* Section */
+    section { padding: 76px 0; }
+    .sec-head { margin-bottom: 42px; }
+    .sec-head .en { font-size: 0.78rem; color: var(--gold); letter-spacing: 0.18em; font-weight: 700; display: block; margin-bottom: 6px; }
+    .sec-head h2 { font-size: 1.75rem; color: var(--navy); font-weight: 700; }
+
+    /* Services */
+    .bg-soft { background: var(--bg-soft); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card {
+      background: #fff; border: 1px solid var(--border); border-radius: 6px;
+      padding: 30px 26px; border-top: 3px solid var(--gold);
+    }
+    .card-num { font-size: 0.8rem; color: var(--gold); font-weight: 700; letter-spacing: 0.12em; margin-bottom: 8px; }
+    .card h3 { font-size: 1.15rem; color: var(--navy); margin-bottom: 12px; }
+    .card p { font-size: 0.92rem; color: var(--muted); }
+
+    /* Strength */
+    .strength-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .strength-box {
+      background: var(--navy); color: #fff; padding: 32px; border-radius: 6px;
+    }
+    .strength-box h3 { color: var(--gold); font-size: 1.1rem; margin-bottom: 10px; }
+    .strength-box p { color: #dce4f0; font-size: 0.94rem; }
+
+    /* Message */
+    .message-box {
+      background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--gold);
+      border-radius: 6px; padding: 36px 34px;
+    }
+    .message-box h3 { font-size: 1.25rem; color: var(--navy); margin-bottom: 14px; }
+    .message-box p { color: var(--text); font-size: 0.98rem; margin-bottom: 18px; }
+    .message-sign { text-align: right; font-weight: 700; color: var(--navy); font-size: 0.95rem; }
+
+    /* Company Table */
+    table.company { width: 100%; border-collapse: collapse; background: #fff; border-top: 2px solid var(--navy); }
+    table.company th, table.company td {
+      padding: 16px 18px; border-bottom: 1px solid var(--border); text-align: left; font-size: 0.95rem;
+    }
+    table.company th { width: 28%; color: var(--navy); font-weight: 700; background: #f8fafc; }
+
+    /* Recruit & Contact */
+    .cta-band {
+      background: var(--navy-deep); color: #fff; text-align: center; padding: 72px 24px;
+    }
+    .cta-band h2 { font-size: 1.7rem; margin-bottom: 14px; }
+    .cta-band p { color: #cbd5e1; max-width: 600px; margin: 0 auto 28px; font-size: 0.96rem; }
+    .contact-info { display: flex; justify-content: center; gap: 36px; flex-wrap: wrap; margin-top: 18px; font-size: 1.05rem; }
+    .contact-info span { color: var(--gold); font-weight: 700; margin-right: 8px; }
+
+    footer {
+      background: #060d18; color: #8c9ab0; text-align: center; padding: 26px 24px; font-size: 0.82rem;
+    }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .cards, .strength-grid { grid-template-columns: 1fr; }
+      table.company th { width: 36%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a href="#" class="brand">
+        <img src="logo.svg" alt="合同会社ライズ ロゴ" />
+        <div class="brand-text">
+          <span class="jp">合同会社ライズ</span>
+          <span class="en">RIZE LLC</span>
+        </div>
+      </a>
+      <nav>
+        <a href="#service">事業内容</a>
+        <a href="#strength">強み・実績</a>
+        <a href="#company">会社概要</a>
+        <a href="#recruit">採用情報</a>
+        <a href="#contact" class="nav-cta">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="hero-badge">RIZE LLC — SENDAI / TOHOKU ELECTRICAL ENGINEERING</span>
+      <h1>現場の力で、<br />明日へ昇る（RIZE）。</h1>
+      <p>22歳での創業から、東北の最先端拠点へ。半導体製造施設・大型プラントの電気設備工事からネットワーク配線・試験測定まで、高い機動力と確かな技術力で期待を超える施工をお届けします。</p>
+      <div class="hero-actions">
+        <a href="#company" class="btn-primary">会社概要を見る</a>
+        <a href="#contact" class="btn-outline">お問い合わせ</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="bg-soft">
+    <div class="container">
+      <div class="sec-head">
+        <span class="en">SERVICE</span>
+        <h2>事業内容</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-num">SERVICE 01</div>
+          <h3>電気設備工事</h3>
+          <p>半導体工場・クリーンルーム・産業施設・商業施設等における電気配線、機器据付、動力・照明設備工事を安全かつ確実に施工します。</p>
+        </div>
+        <div class="card">
+          <div class="card-num">SERVICE 02</div>
+          <h3>電気通信・ネットワーク工事</h3>
+          <p>LAN配線・成端作業、光ファイバー敷設、専用機器（Fluke等）を用いた精密測定・試験調整まで一貫して対応いたします。</p>
+        </div>
+        <div class="card">
+          <div class="card-num">SERVICE 03</div>
+          <h3>現場技術支援・施工管理</h3>
+          <p>有資格者（電気工事士・職長経験者）による現場施工支援および安全書類・工程管理を含め、元請け様の工期完遂をサポートします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="strength">
+    <div class="container">
+      <div class="sec-head">
+        <span class="en">STRENGTH</span>
+        <h2>ライズの強みと対応エリア</h2>
+      </div>
+      <div class="strength-grid">
+        <div class="strength-box">
+          <h3>大型半導体・産業施設での豊富な実績</h3>
+          <p>宮城県・岩手県（北上市エリアほか）の大型半導体製造拠点や産業施設・倉庫など、高い安全基準と施工精度が求められる現場で継続的な実績を積み重ねています。</p>
+        </div>
+        <div class="strength-box">
+          <h3>法令遵守と機動力の高い施工体制</h3>
+          <p>宮城県知事登録の電気工事業者として安全管理・労務管理を徹底。東北全域への機動的な現場対応力で、急な工程変更や増員ニーズにも柔軟に応えます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="message">
+    <div class="container">
+      <div class="sec-head">
+        <span class="en">MESSAGE</span>
+        <h2>代表メッセージ</h2>
+      </div>
+      <div class="message-box">
+        <h3>現場を知り、現場で応える。</h3>
+        <p>令和元年に22歳で合同会社ライズを立ち上げて以来、私たちが貫いてきたのは「任せられた現場を、確かな技術と機動力で最後までやり切る」という姿勢です。大型半導体製造施設をはじめ、高い安全基準と精密さが求められる現場で培った経験を糧に、これからも東北の産業インフラを足元から支え、仲間とともにより高みを目指して昇り続けます。</p>
+        <div class="message-sign">合同会社ライズ 代表社員　南舘 憲</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="company" class="bg-soft">
+    <div class="container">
+      <div class="sec-head">
+        <span class="en">COMPANY</span>
+        <h2>会社概要</h2>
+      </div>
+      <table class="company">
+        <tr><th>商号</th><td>合同会社ライズ（RIZE LLC）</td></tr>
+        <tr><th>代表社員</th><td>南舘 憲</td></tr>
+        <tr><th>設立</th><td>令和元年（2019年）12月6日</td></tr>
+        <tr><th>所在地</th><td>〒982-0841 宮城県仙台市太白区向山4丁目20-19</td></tr>
+        <tr><th>電話番号</th><td>022-797-5411</td></tr>
+        <tr><th>登録・許認可</th><td>登録電気工事業者 宮城県知事登録 第0421648号</td></tr>
+        <tr><th>事業内容</th><td>電気設備工事 / 電気通信・弱電工事 / 建設現場技術支援</td></tr>
+        <tr><th>対応エリア</th><td>宮城県・岩手県・山形県ほか東北全域</td></tr>
+        <tr><th>取引銀行</th><td>仙台銀行</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="recruit">
+    <div class="container">
+      <div class="sec-head">
+        <span class="en">RECRUIT</span>
+        <h2>採用情報</h2>
+      </div>
+      <p style="color: var(--muted); max-width: 760px;">
+        合同会社ライズでは、業務拡大に伴い第一種・第二種電気工事士および現場経験者を募集しています。社会保険完備・出張手当支給。資格取得支援や現場での丁寧なサポート体制を整えています。詳細は電話またはメールにてお気軽にお問い合わせください。
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="cta-band">
+    <div class="container">
+      <h2>お問い合わせ・お見積り依頼</h2>
+      <p>工事のご相談、技術支援のご依頼、採用に関するお問い合わせはお電話またはメールにて承っております。</p>
+      <div class="contact-info">
+        <div><span>TEL</span>022-797-5411</div>
+        <div><span>MAIL</span>rize.rize.ken@gmail.com</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2019–2026 合同会社ライズ (RIZE LLC) All Rights Reserved.
+  </footer>
+</body>
+</html>
