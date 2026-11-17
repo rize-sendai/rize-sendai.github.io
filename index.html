@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>合同会社ライズ | 仙台・東北の電気設備工事・半導体施設・施工支援</title>
-  <meta name="description" content="宮城県仙台市を拠点に東北全域で電気設備工事、半導体製造施設・プラント配線、ネットワーク工事、技術支援を行う合同会社ライズ（RIZE LLC）の公式サイトです。" />
+  <title>合同会社ライズ | 仙台・東北の電気設備工事・通信・空調・建設人材マネジメント</title>
+  <meta name="description" content="宮城県仙台市を拠点に東北全域で電気設備工事、通信・TV設備工事、空調・換気設備工事、建設人材マネジメントを行う合同会社ライズ（RIZE LLC）の公式サイトです。" />
   <meta name="google-site-verification" content="Q3JrpWw5KSJaQnfs_70jkzUtVZ9YT9l_nPsX7q1HiBo" />
   <link rel="canonical" href="https://rize-sendai.github.io/" />
-  <meta property="og:title" content="合同会社ライズ | 仙台・東北の電気設備工事・半導体施設・施工支援" />
-  <meta property="og:description" content="宮城県仙台市を拠点に東北全域で電気設備工事、半導体製造施設・プラント配線、ネットワーク工事、技術支援を行う合同会社ライズ（RIZE LLC）の公式サイトです。" />
+  <meta property="og:title" content="合同会社ライズ | 仙台・東北の電気設備工事・通信・空調・建設人材マネジメント" />
+  <meta property="og:description" content="宮城県仙台市を拠点に東北全域で電気設備工事、通信・TV設備工事、空調・換気設備工事、建設人材マネジメントを行う合同会社ライズ（RIZE LLC）の公式サイトです。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rize-sendai.github.io/" />
   <meta property="og:site_name" content="合同会社ライズ（RIZE LLC）" />
@@ -24,13 +24,14 @@
         "alternateName": "RIZE LLC",
         "url": "https://rize-sendai.github.io/",
         "logo": "https://rize-sendai.github.io/logo.svg",
-        "description": "宮城県仙台市を拠点に東北全域で電気設備工事、半導体製造施設・プラント配線、ネットワーク工事、現場技術支援を行う建設業者。",
+        "description": "宮城県仙台市を拠点に東北全域で電気設備工事、通信・TV設備工事、空調・換気設備工事、建設人材マネジメントを行う建設業者。",
         "foundingDate": "2019-12-06",
         "founder": {
           "@type": "Person",
           "name": "南舘 憲"
         },
         "telephone": "+81-22-797-5411",
+        "faxNumber": "+81-22-797-5412",
         "email": "rize.rize.ken@gmail.com",
         "address": {
           "@type": "PostalAddress",
@@ -48,8 +49,9 @@
         "alternateName": "RIZE LLC",
         "url": "https://rize-sendai.github.io/",
         "image": "https://rize-sendai.github.io/logo.svg",
-        "description": "仙台市太白区を拠点とする電気設備工事業者。半導体製造施設・大型プラントの電気設備工事、電気通信・ネットワーク工事、現場技術支援・施工管理に対応。",
+        "description": "仙台市太白区を拠点とする電気設備工事業者。電気設備工事、通信・TV設備工事、空調・換気設備工事、建設人材マネジメント（技術者手配・現場管理・安全施工）に対応。",
         "telephone": "+81-22-797-5411",
+        "faxNumber": "+81-22-797-5412",
         "email": "rize.rize.ken@gmail.com",
         "parentOrganization": { "@id": "https://rize-sendai.github.io/#organization" },
         "address": {
@@ -68,8 +70,9 @@
         ],
         "knowsAbout": [
           "電気設備工事",
-          "電気通信工事",
-          "ネットワーク配線工事",
+          "通信・TV設備工事",
+          "空調・換気設備工事",
+          "建設人材マネジメント",
           "半導体製造施設の電気工事",
           "施工管理"
         ]
@@ -90,22 +93,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --navy: #0f1e36;
-      --navy-deep: #091324;
-      --gold: #c6a15b;
-      --gold-light: #e0c387;
-      --bg: #ffffff;
-      --bg-soft: #f5f7fa;
-      --text: #1c2430;
-      --muted: #5a6577;
-      --border: #dfe5ee;
+      --black: #0a0a0c;
+      --black-soft: #121216;
+      --surface: #16161b;
+      --surface-elevated: #1c1c22;
+      --gold: #d4af37;
+      --gold-muted: #c6a15b;
+      --gold-light: #ebd18d;
+      --text: #f3f4f6;
+      --muted: #a6adb9;
+      --border: rgba(212, 175, 55, 0.22);
+      --border-soft: rgba(255, 255, 255, 0.08);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--text);
-      background: var(--bg);
+      background: var(--black);
       line-height: 1.75;
     }
     a { color: inherit; text-decoration: none; }
@@ -114,123 +119,137 @@
     /* Header */
     header {
       position: sticky; top: 0; z-index: 50;
-      background: rgba(9, 19, 36, 0.96);
+      background: rgba(10, 10, 12, 0.94);
       backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(198, 161, 91, 0.25);
+      border-bottom: 1px solid var(--border);
     }
     .nav-wrap {
       display: flex; align-items: center; justify-content: space-between;
-      height: 72px;
+      height: 74px;
     }
     .brand {
       display: flex; align-items: center; gap: 12px; color: #fff;
     }
     .brand img {
-      width: 38px; height: 38px;
-      filter: invert(72%) sepia(32%) saturate(600%) hue-rotate(5deg) brightness(95%);
+      width: 40px; height: 40px;
+      filter: invert(76%) sepia(42%) saturate(650%) hue-rotate(6deg) brightness(96%);
     }
-    .brand-text .jp { font-size: 1.05rem; font-weight: 700; letter-spacing: 0.06em; }
-    .brand-text .en { font-size: 0.68rem; color: var(--gold); letter-spacing: 0.16em; display: block; line-height: 1.1; }
-    nav { display: flex; align-items: center; gap: 28px; color: #e2e8f0; font-size: 0.9rem; }
-    nav a:hover { color: var(--gold); }
+    .brand-text .jp { font-size: 1.06rem; font-weight: 700; letter-spacing: 0.08em; color: var(--gold-light); }
+    .brand-text .en { font-size: 0.68rem; color: var(--gold-muted); letter-spacing: 0.2em; display: block; line-height: 1.1; }
+    nav { display: flex; align-items: center; gap: 28px; color: #d6dbe3; font-size: 0.9rem; }
+    nav a:hover { color: var(--gold-light); }
     .nav-cta {
-      background: var(--gold); color: var(--navy-deep); font-weight: 700;
+      background: linear-gradient(135deg, var(--gold-muted), var(--gold-light));
+      color: #0a0a0c; font-weight: 700;
       padding: 9px 18px; border-radius: 4px; font-size: 0.85rem;
     }
-    .nav-cta:hover { background: var(--gold-light); color: var(--navy-deep); }
+    .nav-cta:hover { opacity: 0.92; color: #0a0a0c; }
 
     /* Hero */
     .hero {
-      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, #1a3254 100%);
+      background: radial-gradient(circle at 82% 24%, rgba(212, 175, 55, 0.14), transparent 52%),
+                  linear-gradient(145deg, #070709 0%, #111115 65%, #191712 100%);
       color: #fff;
-      padding: 100px 0 92px;
+      padding: 104px 0 96px;
+      border-bottom: 1px solid var(--border);
       position: relative;
       overflow: hidden;
     }
-    .hero::after {
-      content: ""; position: absolute; inset: 0;
-      background: radial-gradient(circle at 80% 30%, rgba(198, 161, 91, 0.14), transparent 55%);
-      pointer-events: none;
-    }
-    .hero-inner { position: relative; z-index: 1; max-width: 720px; }
+    .hero-inner { position: relative; z-index: 1; max-width: 740px; }
     .hero-badge {
-      display: inline-block; font-size: 0.78rem; letter-spacing: 0.14em;
-      color: var(--gold); border: 1px solid rgba(198, 161, 91, 0.45);
-      padding: 5px 14px; border-radius: 20px; margin-bottom: 22px;
+      display: inline-block; font-size: 0.76rem; letter-spacing: 0.16em;
+      color: var(--gold-light); border: 1px solid rgba(212, 175, 55, 0.45);
+      padding: 5px 15px; border-radius: 20px; margin-bottom: 24px;
+      background: rgba(212, 175, 55, 0.06);
     }
     .hero h1 {
-      font-size: clamp(1.9rem, 4vw, 2.8rem);
-      line-height: 1.35; font-weight: 700; margin-bottom: 20px; letter-spacing: 0.03em;
+      font-size: clamp(1.95rem, 4.2vw, 2.9rem);
+      line-height: 1.35; font-weight: 700; margin-bottom: 20px; letter-spacing: 0.04em;
     }
-    .hero p { color: #cbd5e1; font-size: 1.02rem; margin-bottom: 34px; }
+    .hero h1 .accent { color: var(--gold-light); }
+    .hero p { color: #c7cdd8; font-size: 1.02rem; margin-bottom: 36px; }
     .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
     .btn-primary {
-      background: var(--gold); color: var(--navy-deep); font-weight: 700;
+      background: linear-gradient(135deg, var(--gold-muted), var(--gold-light));
+      color: #0a0a0c; font-weight: 700;
       padding: 13px 28px; border-radius: 4px; display: inline-block;
     }
     .btn-outline {
-      border: 1px solid rgba(255,255,255,0.4); color: #fff;
+      border: 1px solid rgba(212, 175, 55, 0.5); color: var(--gold-light);
       padding: 13px 26px; border-radius: 4px; display: inline-block;
     }
+    .btn-outline:hover { background: rgba(212, 175, 55, 0.08); }
 
     /* Section */
-    section { padding: 76px 0; }
-    .sec-head { margin-bottom: 42px; }
-    .sec-head .en { font-size: 0.78rem; color: var(--gold); letter-spacing: 0.18em; font-weight: 700; display: block; margin-bottom: 6px; }
-    .sec-head h2 { font-size: 1.75rem; color: var(--navy); font-weight: 700; }
-
-    /* Services */
-    .bg-soft { background: var(--bg-soft); }
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .card {
-      background: #fff; border: 1px solid var(--border); border-radius: 6px;
-      padding: 30px 26px; border-top: 3px solid var(--gold);
+    section { padding: 78px 0; }
+    .bg-soft { background: var(--black-soft); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
+    .sec-head { margin-bottom: 40px; }
+    .sec-head .en { font-size: 0.78rem; color: var(--gold); letter-spacing: 0.22em; font-weight: 700; display: block; margin-bottom: 6px; }
+    .sec-head h2 {
+      font-size: 1.75rem; color: #fff; font-weight: 700;
+      padding-bottom: 12px; border-bottom: 1px solid var(--border); display: inline-block; padding-right: 28px;
     }
-    .card-num { font-size: 0.8rem; color: var(--gold); font-weight: 700; letter-spacing: 0.12em; margin-bottom: 8px; }
-    .card h3 { font-size: 1.15rem; color: var(--navy); margin-bottom: 12px; }
-    .card p { font-size: 0.92rem; color: var(--muted); }
+
+    /* Services (4 items matching business card) */
+    .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+      padding: 30px 28px; border-top: 3px solid var(--gold);
+    }
+    .card-en { font-size: 0.74rem; color: var(--gold-muted); font-weight: 700; letter-spacing: 0.16em; margin-bottom: 6px; }
+    .card h3 { font-size: 1.2rem; color: var(--gold-light); margin-bottom: 10px; letter-spacing: 0.04em; }
+    .card-tags { font-size: 0.92rem; color: #eef0f4; font-weight: 500; margin-bottom: 10px; }
+    .card p { font-size: 0.9rem; color: var(--muted); }
 
     /* Strength */
     .strength-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
     .strength-box {
-      background: var(--navy); color: #fff; padding: 32px; border-radius: 6px;
+      background: var(--surface); border: 1px solid var(--border-soft);
+      border-left: 3px solid var(--gold); padding: 32px; border-radius: 6px;
     }
-    .strength-box h3 { color: var(--gold); font-size: 1.1rem; margin-bottom: 10px; }
-    .strength-box p { color: #dce4f0; font-size: 0.94rem; }
+    .strength-box h3 { color: var(--gold-light); font-size: 1.12rem; margin-bottom: 10px; }
+    .strength-box p { color: #cdd3dd; font-size: 0.94rem; }
 
     /* Message */
     .message-box {
-      background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--gold);
-      border-radius: 6px; padding: 36px 34px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 4px solid var(--gold); border-radius: 6px; padding: 36px 34px;
     }
-    .message-box h3 { font-size: 1.25rem; color: var(--navy); margin-bottom: 14px; }
-    .message-box p { color: var(--text); font-size: 0.98rem; margin-bottom: 18px; }
-    .message-sign { text-align: right; font-weight: 700; color: var(--navy); font-size: 0.95rem; }
+    .message-box h3 { font-size: 1.25rem; color: var(--gold-light); margin-bottom: 14px; }
+    .message-box p { color: #dde2ea; font-size: 0.98rem; margin-bottom: 18px; }
+    .message-sign { text-align: right; font-weight: 700; color: var(--gold-light); font-size: 0.95rem; letter-spacing: 0.05em; }
 
     /* Company Table */
-    table.company { width: 100%; border-collapse: collapse; background: #fff; border-top: 2px solid var(--navy); }
-    table.company th, table.company td {
-      padding: 16px 18px; border-bottom: 1px solid var(--border); text-align: left; font-size: 0.95rem;
+    table.company {
+      width: 100%; border-collapse: collapse;
+      background: var(--surface); border-top: 2px solid var(--gold); border-bottom: 1px solid var(--border);
     }
-    table.company th { width: 28%; color: var(--navy); font-weight: 700; background: #f8fafc; }
+    table.company th, table.company td {
+      padding: 16px 20px; border-bottom: 1px solid var(--border-soft); text-align: left; font-size: 0.95rem;
+    }
+    table.company th { width: 28%; color: var(--gold-light); font-weight: 700; background: var(--surface-elevated); }
+    table.company td { color: #e5e7eb; }
 
     /* Recruit & Contact */
     .cta-band {
-      background: var(--navy-deep); color: #fff; text-align: center; padding: 72px 24px;
+      background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12), transparent 60%), #070709;
+      color: #fff; text-align: center; padding: 76px 24px;
+      border-top: 1px solid var(--border);
     }
-    .cta-band h2 { font-size: 1.7rem; margin-bottom: 14px; }
-    .cta-band p { color: #cbd5e1; max-width: 600px; margin: 0 auto 28px; font-size: 0.96rem; }
-    .contact-info { display: flex; justify-content: center; gap: 36px; flex-wrap: wrap; margin-top: 18px; font-size: 1.05rem; }
-    .contact-info span { color: var(--gold); font-weight: 700; margin-right: 8px; }
+    .cta-band h2 { font-size: 1.7rem; color: var(--gold-light); margin-bottom: 14px; }
+    .cta-band p { color: #c7cdd8; max-width: 620px; margin: 0 auto 28px; font-size: 0.96rem; }
+    .contact-info { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-top: 18px; font-size: 1.04rem; }
+    .contact-info span { color: var(--gold); font-weight: 700; margin-right: 8px; letter-spacing: 0.08em; }
 
     footer {
-      background: #060d18; color: #8c9ab0; text-align: center; padding: 26px 24px; font-size: 0.82rem;
+      background: #050506; color: #7e8694; text-align: center; padding: 26px 24px; font-size: 0.82rem;
+      border-top: 1px solid var(--border-soft);
     }
 
     @media (max-width: 768px) {
       nav { display: none; }
       .cards, .strength-grid { grid-template-columns: 1fr; }
-      table.company th { width: 36%; }
+      table.company th { width: 38%; }
     }
   </style>
 </head>
@@ -256,9 +275,9 @@
 
   <section class="hero">
     <div class="container hero-inner">
-      <span class="hero-badge">RIZE LLC — SENDAI / TOHOKU ELECTRICAL ENGINEERING</span>
-      <h1>現場の力で、<br />明日へ昇る（RIZE）。</h1>
-      <p>22歳での創業から、東北の最先端拠点へ。半導体製造施設・大型プラントの電気設備工事からネットワーク配線・試験測定まで、高い機動力と確かな技術力で期待を超える施工をお届けします。</p>
+      <span class="hero-badge">RIZE LLC — SENDAI / TOHOKU CONSTRUCTION &amp; MANAGEMENT</span>
+      <h1>現場の力で、<br /><span class="accent">明日へ昇る（RIZE）。</span></h1>
+      <p>22歳での創業から、東北の最先端拠点へ。電気設備工事、通信・TV設備工事、空調・換気設備工事から建設人材マネジメントまで、高い機動力と確かな技術力で期待を超える施工をお届けします。</p>
       <div class="hero-actions">
         <a href="#company" class="btn-primary">会社概要を見る</a>
         <a href="#contact" class="btn-outline">お問い合わせ</a>
@@ -269,24 +288,33 @@
   <section id="service" class="bg-soft">
     <div class="container">
       <div class="sec-head">
-        <span class="en">SERVICE</span>
+        <span class="en">BUSINESS ACTIVITIES</span>
         <h2>事業内容</h2>
       </div>
       <div class="cards">
         <div class="card">
-          <div class="card-num">SERVICE 01</div>
-          <h3>電気設備工事</h3>
-          <p>半導体工場・クリーンルーム・産業施設・商業施設等における電気配線、機器据付、動力・照明設備工事を安全かつ確実に施工します。</p>
+          <div class="card-en">ELECTRICAL WORKS</div>
+          <h3>◆ 電気設備工事</h3>
+          <div class="card-tags">プラント電気・高圧受変電・一般電気工事・配管配線</div>
+          <p>半導体製造施設・クリーンルーム・産業施設・商業施設等における電気配線、機器据付、動力・照明設備工事を安全かつ確実に施工します。</p>
         </div>
         <div class="card">
-          <div class="card-num">SERVICE 02</div>
-          <h3>電気通信・ネットワーク工事</h3>
-          <p>LAN配線・成端作業、光ファイバー敷設、専用機器（Fluke等）を用いた精密測定・試験調整まで一貫して対応いたします。</p>
+          <div class="card-en">TELECOMMUNICATION</div>
+          <h3>◆ 通信・TV設備工事</h3>
+          <div class="card-tags">LAN配線・光ファイバー・TV共聴設備・ネットワーク構築</div>
+          <p>高速ネットワークインフラの敷設・成端作業から、専用機器を用いた精密測定・試験調整まで一貫して対応いたします。</p>
         </div>
         <div class="card">
-          <div class="card-num">SERVICE 03</div>
-          <h3>現場技術支援・施工管理</h3>
-          <p>有資格者（電気工事士・職長経験者）による現場施工支援および安全書類・工程管理を含め、元請け様の工期完遂をサポートします。</p>
+          <div class="card-en">HVAC &amp; VENTILATION</div>
+          <h3>◆ 空調・換気設備工事</h3>
+          <div class="card-tags">業務用空調・一般空調・換気設備設計施工</div>
+          <p>工場・倉庫・オフィス・店舗など、用途と規模に応じた最適な空調・換気設備の設計から施工・メンテナンスまで対応します。</p>
+        </div>
+        <div class="card">
+          <div class="card-en">CONSTRUCTION MANAGEMENT</div>
+          <h3>◆ 建設人材マネジメント</h3>
+          <div class="card-tags">電気・建設専門技術者手配・現場管理・安全施工</div>
+          <p>有資格者（電気工事士・職長経験者）の手配から現場施工管理・安全書類・工程管理まで、元請け様の工期完遂を力強くサポートします。</p>
         </div>
       </div>
     </div>
@@ -304,8 +332,8 @@
           <p>宮城県・岩手県（北上市エリアほか）の大型半導体製造拠点や産業施設・倉庫など、高い安全基準と施工精度が求められる現場で継続的な実績を積み重ねています。</p>
         </div>
         <div class="strength-box">
-          <h3>法令遵守と機動力の高い施工体制</h3>
-          <p>宮城県知事登録の電気工事業者として安全管理・労務管理を徹底。東北全域への機動的な現場対応力で、急な工程変更や増員ニーズにも柔軟に応えます。</p>
+          <h3>法令遵守と機動力の高い施工・手配体制</h3>
+          <p>宮城県知事登録の電気工事業者として安全管理・労務管理を徹底。東北全域への機動的な現場対応力と専門技術者マネジメントで、急な工程変更や増員ニーズにも柔軟に応えます。</p>
         </div>
       </div>
     </div>
@@ -320,7 +348,7 @@
       <div class="message-box">
         <h3>現場を知り、現場で応える。</h3>
         <p>令和元年に22歳で合同会社ライズを立ち上げて以来、私たちが貫いてきたのは「任せられた現場を、確かな技術と機動力で最後までやり切る」という姿勢です。大型半導体製造施設をはじめ、高い安全基準と精密さが求められる現場で培った経験を糧に、これからも東北の産業インフラを足元から支え、仲間とともにより高みを目指して昇り続けます。</p>
-        <div class="message-sign">合同会社ライズ 代表社員　南舘 憲</div>
+        <div class="message-sign">合同会社ライズ CEO　南舘 憲</div>
       </div>
     </div>
   </section>
@@ -333,12 +361,12 @@
       </div>
       <table class="company">
         <tr><th>商号</th><td>合同会社ライズ（RIZE LLC）</td></tr>
-        <tr><th>代表社員</th><td>南舘 憲</td></tr>
+        <tr><th>代表社員 / CEO</th><td>南舘 憲（Ken Minamidate）</td></tr>
         <tr><th>設立</th><td>令和元年（2019年）12月6日</td></tr>
         <tr><th>所在地</th><td>〒982-0841 宮城県仙台市太白区向山4丁目20-19</td></tr>
-        <tr><th>電話番号</th><td>022-797-5411</td></tr>
-        <tr><th>登録・許認可</th><td>登録電気工事業者 宮城県知事登録 第0421648号</td></tr>
-        <tr><th>事業内容</th><td>電気設備工事 / 電気通信・弱電工事 / 建設現場技術支援</td></tr>
+        <tr><th>電話番号 / FAX</th><td>TEL 022-797-5411 / FAX 022-797-5412</td></tr>
+        <tr><th>登録・許認可</th><td>登録電気工事業者 宮城県知事登録 第0421648号（一般用電気工作物）</td></tr>
+        <tr><th>事業内容</th><td>電気設備工事 / 通信・TV設備工事 / 空調・換気設備工事 / 建設人材マネジメント</td></tr>
         <tr><th>対応エリア</th><td>宮城県・岩手県・山形県ほか東北全域</td></tr>
         <tr><th>取引銀行</th><td>仙台銀行</td></tr>
       </table>
@@ -360,9 +388,10 @@
   <section id="contact" class="cta-band">
     <div class="container">
       <h2>お問い合わせ・お見積り依頼</h2>
-      <p>工事のご相談、技術支援のご依頼、採用に関するお問い合わせはお電話またはメールにて承っております。</p>
+      <p>工事のご相談、技術者手配・建設人材マネジメントのご依頼、採用に関するお問い合わせはお電話またはメールにて承っております。</p>
       <div class="contact-info">
         <div><span>TEL</span>022-797-5411</div>
+        <div><span>FAX</span>022-797-5412</div>
         <div><span>MAIL</span>rize.rize.ken@gmail.com</div>
       </div>
     </div>
